@@ -12,7 +12,15 @@ jobs:
     steps:
       - name: Code Checkout
         uses: actions/checkout@v3
+
+      - name: Listing the files
+        run: ls -ltr
+        shell: bash
+
+      - name: Make the script executable
+        run: chmod +x test.sh
+        shell: bash
       
       - name: Running the Script
-        run: bash scripts/test.sh
+        run: ./test.sh
         shell: bash

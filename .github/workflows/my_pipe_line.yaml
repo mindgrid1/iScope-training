@@ -13,8 +13,6 @@ jobs:
       - name: Code Checkout
         uses: actions/checkout@v3
       
-      - name: Make the script Executable
-        run: chmod +x ./scripts/test.sh
-
       - name: Running the Script
-        run: bash ./scripts/test.sh
+        run: bash scripts/test.sh
+        shell: bash
